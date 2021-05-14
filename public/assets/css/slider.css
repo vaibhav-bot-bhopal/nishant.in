@@ -1,0 +1,290 @@
+.art-content .art-postcontent-0 .layout-item-0 { padding: 10px;  }
+        .ie7 .art-post .art-layout-cell {border:none !important; padding:0 !important; }
+        .ie6 .art-post .art-layout-cell {border:none !important; padding:0 !important; }
+
+        .art-slidecontainerslide1 {
+            position: relative;
+                width: 931px;
+            height: 620px;
+                }
+
+        .default-responsive .art-header .art-slidecontainerslide1,
+        .responsive .art-header .art-slidecontainerslide1
+        {
+        position: absolute !important;
+        }
+
+        .responsive .art-pageslider .art-slidecontainerslide1 {
+        position: absolute !important;
+        }
+
+        .art-slidecontainerslide1 .art-slide-item
+        {
+
+            -webkit-transform: rotate(0);
+            -moz-transform: rotate(0);
+            transform: rotate(0);
+        }
+
+        .art-slidecontainerslide1 .art-slide-item {
+            -webkit-transition: 1000ms ease-in-out opacity;
+            -moz-transition: 1000ms ease-in-out opacity;
+            -ms-transition: 1000ms ease-in-out opacity;
+            -o-transition: 1000ms ease-in-out opacity;
+            transition: 1000ms ease-in-out opacity;
+            position: absolute !important;
+            display: none;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            width:  100%;
+            height: 100%;
+        }
+
+        .art-slidecontainerslide1 .active, .art-slidecontainerslide1 .next, .art-slidecontainerslide1 .prev {
+            display: block;
+        }
+
+        .art-slidecontainerslide1 .active {
+            opacity: 1;
+        }
+
+        .art-slidecontainerslide1 .next, .art-slidecontainerslide1 .prev {
+            width: 100%;
+        }
+
+        .art-slidecontainerslide1 .next.forward, .art-slidecontainerslide1 .prev.back {
+            opacity: 1;
+        }
+
+        .art-slidecontainerslide1 .active.forward {
+            opacity: 0;
+        }
+
+        .art-slidecontainerslide1 .active.back {
+            opacity: 0;
+        }
+
+        .art-slideslide10 {
+            background-image:  url('../images/slideslide10.jpg');
+                /* background-size:  auto auto; */
+                background-position:  center center;
+            background-repeat: no-repeat;
+        }
+
+        /* special setup for header/pageslider */
+        .responsive .art-header .art-slideslide10 {
+            background-image:  url('../images/slideslide10.jpg');
+            background-size: auto auto;
+            background-position:  center center;
+            background-repeat: no-repeat;
+        }
+
+        .responsive .art-pageslider .art-slideslide10 {
+            background-image:  url('../images/slideslide10.jpg');
+            background-size: auto auto;
+            background-position:  center center;
+            background-repeat: no-repeat;
+        }
+
+        .default-responsive .art-header .art-slideslide10 {
+            background-image: url('../images/slideslide10.jpg');
+            background-size: auto auto;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+
+        .default-responsive .art-pageslider .art-slideslide10 {
+            background-image: url('../images/slideslide10.jpg');
+            background-size: auto auto;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }.art-slideslide11 {
+            background-image:  url('../images/slideslide11.jpg');
+                /* background-size:  auto auto; */
+                background-position:  center center;
+            background-repeat: no-repeat;
+        }
+
+        /* special setup for header/pageslider */
+        .responsive .art-header .art-slideslide11 {
+            background-image:  url('../images/slideslide11.jpg');
+            background-size: auto auto;
+            background-position:  center center;
+            background-repeat: no-repeat;
+        }
+
+        .responsive .art-pageslider .art-slideslide11 {
+            background-image:  url('../images/slideslide11.jpg');
+            background-size: auto auto;
+            background-position:  center center;
+            background-repeat: no-repeat;
+        }
+
+        .default-responsive .art-header .art-slideslide11 {
+            background-image: url('../images/slideslide11.jpg');
+            background-size: auto auto;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+
+        .default-responsive .art-pageslider .art-slideslide11 {
+            background-image: url('../images/slideslide11.jpg');
+            background-size: auto auto;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }.art-slideslide12 {
+            background-image:  url('../images/slideslide12.jpg');
+                /* background-size:  auto auto; */
+                background-position:  center center;
+            background-repeat: no-repeat;
+        }
+
+        /* special setup for header/pageslider */
+        .responsive .art-header .art-slideslide12 {
+            background-image:  url('../images/slideslide12.jpg');
+            background-size: auto auto;
+            background-position:  center center;
+            background-repeat: no-repeat;
+        }
+
+        .responsive .art-pageslider .art-slideslide12 {
+            background-image:  url('../images/slideslide12.jpg');
+            background-size: auto auto;
+            background-position:  center center;
+            background-repeat: no-repeat;
+        }
+
+        .default-responsive .art-header .art-slideslide12 {
+            background-image: url('../images/slideslide12.jpg');
+            background-size: auto auto;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+
+        .default-responsive .art-pageslider .art-slideslide12 {
+            background-image: url('../images/slideslide12.jpg');
+            background-size: auto auto;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }.art-slideslide13 {
+            background-image:  url('../images/slideslide13.jpg');
+                /* background-size:  auto auto; */
+                background-position:  center center;
+            background-repeat: no-repeat;
+        }
+
+        /* special setup for header/pageslider */
+        .responsive .art-header .art-slideslide13 {
+            background-image:  url('../images/slideslide13.jpg');
+            background-size: auto auto;
+            background-position:  center center;
+            background-repeat: no-repeat;
+        }
+
+        .responsive .art-pageslider .art-slideslide13 {
+            background-image:  url('../images/slideslide13.jpg');
+            background-size: auto auto;
+            background-position:  center center;
+            background-repeat: no-repeat;
+        }
+
+        .default-responsive .art-header .art-slideslide13 {
+            background-image: url('../images/slideslide13.jpg');
+            background-size: auto auto;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+
+        .default-responsive .art-pageslider .art-slideslide13 {
+            background-image: url('../images/slideslide13.jpg');
+            background-size: auto auto;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }.art-slideslide14 {
+            background-image:  url('../images/slideslide14.jpg');
+                /* background-size:  auto auto; */
+                background-position:  center center;
+            background-repeat: no-repeat;
+        }
+
+        /* special setup for header/pageslider */
+        .responsive .art-header .art-slideslide14 {
+            background-image:  url('../images/slideslide14.jpg');
+            background-size: auto auto;
+            background-position:  center center;
+            background-repeat: no-repeat;
+        }
+
+        .responsive .art-pageslider .art-slideslide14 {
+            background-image:  url('../images/slideslide14.jpg');
+            background-size: auto auto;
+            background-position:  center center;
+            background-repeat: no-repeat;
+        }
+
+        .default-responsive .art-header .art-slideslide14 {
+            background-image: url('../images/slideslide14.jpg');
+            background-size: auto auto;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+
+        .default-responsive .art-pageslider .art-slideslide14 {
+            background-image: url('../images/slideslide14.jpg');
+            background-size: auto auto;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+
+        .art-slidenavigatorslide1 {
+        display: inline-block;
+        position: absolute;
+        direction: ltr !important;
+        top: 596px;
+        left: 44.41%;
+        z-index: 101;
+        line-height: 0 !important;
+        -webkit-background-origin: border !important;
+        -moz-background-origin: border !important;
+        background-origin: border-box !important;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        text-align: center;
+            white-space: nowrap;
+        }
+
+        .art-slidenavigatorslide1
+        {
+            background: #C2C3AC;background: transparent;
+            -webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;
+            padding:7px;
+        }
+
+        .art-slidenavigatorslide1 > a
+        {
+            background: #292929;
+            -webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%;
+            margin:0 10px 0 0;
+            width: 10px;
+            height: 10px;
+        }
+
+        .art-slidenavigatorslide1 > a.active
+        {
+            background: #E3E0BF;
+            -webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%;
+            margin:0 10px 0 0;
+            width: 10px;
+            height: 10px;
+        }
+
+        .art-slidenavigatorslide1 > a:hover
+        {
+            background: #E3E0BF;
+            -webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%;
+            margin:0 10px 0 0;
+            width: 10px;
+            height: 10px;
+        }
