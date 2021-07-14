@@ -98,7 +98,7 @@
                                 @forelse ($datas as $data)
                                 <div class="art-content-layout layout-item-1" style="margin-bottom: 10px;">
                                     <div class="art-content-layout-row">
-                                        <div class="art-layout-cell layout-item-2" style="width: 100%" >
+                                        <div class="art-layout-cell layout-item-2" style="width: 100%; text-align: justify; font-size: 16px;">
                                             <h2>
                                                 <div class="aspect-ratio aspect-ratio-16-9 img-frame">
                                                     <img  alt="blogger-image" class="art-lightbox" src="{{asset('public/storage/eng_news/'. $data->image)}}" style="float: left;"><br>

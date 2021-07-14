@@ -131,8 +131,20 @@ return [
     */
 
     'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
+        'n_title' => [
+            'required' => 'The Title Field is Required !!',
+        ],
+        'n_date' => [
+            'required' => 'The Date Field is Required !!',
+        ],
+        'n_disc' => [
+            'required' => 'The Description is Required !!',
+        ],
+        'n_file' => [
+            'required' => 'The Feature Image is Required !!',
+        ],
+        'n_name' => [
+            'required' => 'The Name Field is Required !!',
         ],
     ],
 

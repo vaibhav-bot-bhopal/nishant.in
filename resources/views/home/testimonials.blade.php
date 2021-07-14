@@ -18,8 +18,8 @@
             <div class="art-content-layout-row">
                 <div class="art-layout-cell art-content">
                     <article class="art-post art-article">
-                        <div class="art-postcontent art-postcontent-0 clearfix" style="text-align: justify!important;">
-                            <div class="art-content-layout layout-item-0">
+                        <div class="art-postcontent art-postcontent-0 clearfix">
+                            <div class="art-content-layout layout-item-0" style="text-align: justify; font-size: 16px;">
                                 <div class="art-content-layout-row">
                                     @forelse ($data as $data)
                                         <div class="art-layout-cell layout-item-1" style="width: 33%" >

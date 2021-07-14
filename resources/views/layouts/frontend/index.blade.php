@@ -21,6 +21,9 @@
     <script src="{{asset('public/assets/js/script.responsive.js')}}"></script>
     <link rel="stylesheet" href="{{asset('public/assets/css/slider.css')}}" media="all">
 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
      <!--Custom JS-->
      @stack('js')
 

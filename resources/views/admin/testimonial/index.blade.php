@@ -78,7 +78,7 @@
                     <td class="text-center">
                         <img src="{{asset('public/storage/testimonial/'.$data->image)}}" width="100" height="100" class="img-responsive rounded-circle border border-light" alt="image">
                     </td>
-                    <td><a href="{{ route('editTestimonial', $data->id) }}" class="btn btn-sm btn-primary">Edit</a></td>
+                    <td><a href="{{ route('editTestimonial', $data->id) }}" class="btn btn-sm btn-success">Edit</a></td>
                     <td>
                         <button type="button" class="btn btn-sm btn-danger" onclick="deleteTestimonial({{ $data->id }})">Delete</button>
                         <form id="delete-form-{{ $data->id }}" action="{{ route('deleteTestimonial', $data->id) }}" method="POST" style="display: none;">

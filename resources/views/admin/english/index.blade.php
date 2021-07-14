@@ -80,12 +80,12 @@
                     <label for="n_title">Title</label>
                     <input type="text" class="form-control" id="n_title" name="n_title" value="{{old('n_title')}}" placeholder="Enter Title Here">
                     @error('n_title')
-                        span class="error">{{ $message }}</span>
+                        <span class="error">{{ $message }}</span>
                     @enderror
                 </div>
 
                 <div class="form-group">
-                    <label for="n_data">Date</label>
+                    <label for="n_date">Date</label>
                     <input type="date" class="form-control" id="n_date" name="n_date" value="{{old('n_date')}}" >
                     @error('n_date')
                         <span class="error">{{ $message }}</span>
@@ -143,7 +143,7 @@
                     <td>
                         <img src="{{asset('public/storage/eng_news/'.$data->image)}}" width="200" height="150" class="img-responsive rounded" alt="image">
                     </td>
-                    <td><a href="{{ route('news_edit', $data->id) }}" class="btn btn-sm btn-primary">Edit</a></td>
+                    <td><a href="{{ route('news_edit', $data->id) }}" class="btn btn-sm btn-success">Edit</a></td>
                     <td>
                         <button type="button" class="btn btn-sm btn-danger" onclick="deletePost({{ $data->id }})">Delete</button>
                         <form id="delete-form-{{ $data->id }}" action="{{ route('news_del', $data->id) }}" method="POST" style="display: none;">

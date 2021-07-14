@@ -102,7 +102,7 @@
             <div class="art-content-layout-row">
                 <div class="art-layout-cell art-content">
                     <article class="art-post art-article">
-                        <div class="art-postcontent art-postcontent-0 clearfix" style="text-align: justify;">
+                        <div class="art-postcontent art-postcontent-0 clearfix" style="text-align: justify; font-size: 16px;">
                             {{-- <p style="text-align: center;">
                                 <img width="440" height="293" alt="" class="art-lightbox" src="{{asset('public/storage/eng_news/'. $detail->image)}}"><br>
                             </p> --}}

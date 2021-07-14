@@ -528,7 +528,7 @@ var menuExtendedCreate = (function ($) {
             subm.children("li").children("a").css("width", "");
 
             var lw = 0, rw = 0;
-        
+
             if (typeof subm.attr("data-ext-l") !== "undefined" && typeof subm.attr("data-ext-r") !== "undefined") {
                 lw = parseInt(subm.attr("data-ext-l"), 10) + 0;
                 rw = parseInt(subm.attr("data-ext-r"), 10) + 0;
@@ -1230,11 +1230,11 @@ if (typeof window.defaultResponsiveData === 'undefined') window.defaultResponsiv
 
 resizeData['headline'] = {
    responsive: [
-                  { left: 0.08, top: 0.58, visible: true }, 
-                  { left: 0.08, top: 0.58, visible: true }, 
-                  { left: 0.08, top: 0.58, visible: true }, 
-                  { left: 0.08, top: 0.58, visible: true }, 
-                  { left: 0.08, top: 0.58, visible: true }, 
+                  { left: 0.08, top: 0.58, visible: true },
+                  { left: 0.08, top: 0.58, visible: true },
+                  { left: 0.08, top: 0.58, visible: true },
+                  { left: 0.08, top: 0.58, visible: true },
+                  { left: 0.08, top: 0.58, visible: true },
                ],
    area: {
        x: 0,
@@ -1246,11 +1246,11 @@ resizeData['headline'] = {
 
 resizeData['slogan'] = {
    responsive: [
-                  { left: 0.29, top: 0.83, visible: true }, 
-                  { left: 0.34, top: 0.84, visible: true }, 
-                  { left: 0.41, top: 0.82, visible: true }, 
-                  { left: 0.29, top: 0.83, visible: true }, 
-                  { left: 0.29, top: 0.83, visible: true }, 
+                  { left: 0.29, top: 0.83, visible: true },
+                  { left: 0.34, top: 0.84, visible: true },
+                  { left: 0.41, top: 0.82, visible: true },
+                  { left: 0.29, top: 0.83, visible: true },
+                  { left: 0.29, top: 0.83, visible: true },
                ],
    area: {
        x: 0,
@@ -1318,7 +1318,7 @@ function sheetLeftFunc(sheet, object) {
 }
 
 var headerObjectResizer = {
-    
+
     postInit: false,
 
     resize: (function ($) {
@@ -1333,7 +1333,7 @@ var headerObjectResizer = {
             // if we don't use full custom responsive so we MUST cleanup all styles
             var cleanUpStyles = false;
             // when use default respo so while in desktop mode always use 0-type, in other case cleanup our styles
-            if (typeof responsiveDesign !== 'undefined' && 
+            if (typeof responsiveDesign !== 'undefined' &&
                     defaultResponsiveData[responsiveDesign.responsiveTypeIdx] &&
                     responsiveDesign.isResponsive) {
                 cleanUpStyles = true;

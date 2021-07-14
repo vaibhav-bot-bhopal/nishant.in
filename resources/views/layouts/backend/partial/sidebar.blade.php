@@ -3,7 +3,7 @@
     @if (session('locale') == 'en')
         <!-- Brand Logo -->
         <a href="#" class="brand-link">
-            <img src="{{asset('public/assets/images/side-logo.png')}}" alt="MPTFS Logo" class="brand-image img-circle" style="opacity: .8">
+            <img src="{{asset('public/assets/images/nishant-logo.png')}}" alt="Nishant-Logo" class="brand-image img-circle" style="opacity: .8">
             @if (Request::is('admin*'))
                 <span class="brand-text font-weight-light">Super Admin Portal</span>
             @endif
@@ -248,7 +248,7 @@
     @if (session('locale') == 'hi')
         <!-- Brand Logo -->
         <a href="#" class="brand-link">
-            <img src="{{asset('public/assets/images/side-logo.png')}}" alt="MPTFS Logo" class="brand-image img-circle" style="opacity: .8">
+            <img src="{{asset('public/assets/images/nishant-logo.png')}}" alt="Nishant-Logo" class="brand-image img-circle" style="opacity: .8">
             @if (Request::is('admin*'))
                 <span class="brand-text font-weight-light">सुपर एडमिन पोर्टल</span>
             @endif

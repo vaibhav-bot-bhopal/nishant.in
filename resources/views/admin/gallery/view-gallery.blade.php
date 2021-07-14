@@ -3,6 +3,21 @@
 @push('css')
     <!-- Ekko Lightbox -->
     <link rel="stylesheet" href="{{asset('public/assets/plugins/ekko-lightbox/ekko-lightbox.css')}}">
+
+    <style>
+        :root {
+            --minimum-width: 300px;
+            --ratio: 16/9;
+        }
+
+        .card .card-body .image-box img {
+            background-color: #ffffff; /* To visualize empty space */
+            aspect-ratio: var(--ratio);
+            object-fit: contain;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
 @endpush
 
 @section('content')
@@ -18,9 +33,11 @@
 
                             <div class="card">
                                 <div class="card-body text-center">
-                                    <a href="{{asset('public/storage/gallery/'. $photo->filename)}}" data-toggle="lightbox" data-title="{{$photo->original_name}}" data-gallery="gallery">
-                                        <img class="img-fluid pad rounded" src="{{asset('public/storage/gallery/'. $photo->filename)}}" alt="Gallery Image" style="height: 300px!important;">
-                                    </a>
+                                    <div class="image-box">
+                                        <a href="{{asset('public/storage/gallery/'. $photo->filename)}}" data-toggle="lightbox" data-title="{{$photo->original_name}}" data-gallery="gallery">
+                                            <img class="img-fluid pad rounded" src="{{asset('public/storage/gallery/'. $photo->filename)}}" alt="Gallery Image" style="height: 300px!important;">
+                                        </a>
+                                    </div>
                                 </div><!-- /.card-body -->
 
                                 <div class="card-footer d-flex">
