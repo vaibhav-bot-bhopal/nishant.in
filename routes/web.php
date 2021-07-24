@@ -1,9 +1,11 @@
 <?php
 
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MainController;
+use App\Http\Controllers\SettingsController;
 use App\Http\Controllers\SuperAdminController;
 use App\Http\Controllers\TestimonialController;
 use Illuminate\Support\Facades\Auth;
@@ -36,8 +38,16 @@ Route::get('/blog-detail/{slug}', [BlogController::class, 'blogDetail'])->name('
 Auth::routes();
 
 Route::group(['prefix' => 'superadmin', 'middleware' => ['auth', 'isSuperadmin', 'prevent-back-history']], function () {
+    // Account Settings
+    Route::get('profile', [SettingsController::class, 'index'])->name('suadmin.profile');
+    Route::put('profile-update', [SettingsController::class, 'updateProfile'])->name('suadmin.profile.update');
+    Route::get('changePassword', [SettingsController::class, 'changePassword'])->name('suadmin.changePassword');
+    Route::put('updatePassword', [SettingsController::class, 'updatePassword'])->name('suadmin.updatePassword');
+    Route::get('adminChangePassword/{id}', [SettingsController::class, 'adminChangePassword'])->name('suadmin.changeadminpassword');
+    Route::put('adminUpdatePassword/{id}', [SettingsController::class, 'adminUpdatePassword'])->name('suadmin.updateadminpassword');
+
     // For Super Admin Dashboard
-    Route::get('/dashboard', [SuperAdminController::class, 'index'])->name('dashboard');
+    Route::get('dashboard', [SuperAdminController::class, 'index'])->name('superadmin.dashboard');
     Route::get('/role-edit/{id}', [SuperAdminController::class, 'editUserRole'])->name('editUserRole');
     Route::put('/role-update/{id}', [SuperAdminController::class, 'updateUserRole'])->name('updateUserRole');
     Route::get('/role-delete/{id}', [SuperAdminController::class, 'deleteUserRole'])->name('deleteUserRole');
@@ -46,9 +56,15 @@ Route::group(['prefix' => 'superadmin', 'middleware' => ['auth', 'isSuperadmin',
 
 Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'isAdmin', 'prevent-back-history']], function () {
     // For Admin Dashboard
+    Route::get('dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
+
+    // Account Settings
+    Route::get('profile', [SettingsController::class, 'index'])->name('admin.profile');
+    Route::put('profile-update', [SettingsController::class, 'updateProfile'])->name('admin.profile.update');
+    Route::get('changePassword', [SettingsController::class, 'changePassword'])->name('admin.changePassword');
+    Route::put('updatePassword', [SettingsController::class, 'updatePassword'])->name('admin.updatePassword');
 
     // Route for articles
-    Route::get('/dashboard', [HomeController::class, 'dashboard'])->name('dashboard');
     Route::get('/news_add', [HomeController::class, 'english'])->name('news_add');
     Route::post('/news_create', [HomeController::class, 'news_create'])->name('news_create');
     Route::get('/news_edit/{id}', [HomeController::class, 'news_edit'])->name('news_edit');

@@ -132,19 +132,33 @@ return [
 
     'custom' => [
         'n_title' => [
-            'required' => 'The Title Field is Required !!',
+            'required' => 'The title field is required !!',
         ],
         'n_date' => [
-            'required' => 'The Date Field is Required !!',
+            'required' => 'The date field is required !!',
         ],
         'n_disc' => [
-            'required' => 'The Description is Required !!',
+            'required' => 'The description is required !!',
         ],
         'n_file' => [
-            'required' => 'The Feature Image is Required !!',
+            'image' => 'The feature image field must be an image.',
+            'required' => 'The feature image is required !!',
+            'mimes' => 'The feature image field supported file of type: :values.',
         ],
         'n_name' => [
-            'required' => 'The Name Field is Required !!',
+            'required' => 'The name field is required !!',
+        ],
+        'name' => [
+            'required' => 'The name field is required !!',
+        ],
+        'email' => [
+            'required' => 'The email field is required !!',
+        ],
+        'old_password' => [
+            'required' => 'The old password field is required !!',
+        ],
+        'password' => [
+            'required' => 'The password field is required !!',
         ],
     ],
 

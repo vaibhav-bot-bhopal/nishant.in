@@ -28,14 +28,6 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function dashboard()
-    {
-        $article_count = newsEnglish::all()->count();
-        $testimonial_count = Testimonial::all()->count();
-        $gallery_count = Gallery::all()->count();
-        return view('admin.english.dashboard', compact('article_count','testimonial_count','gallery_count'));
-    }
-
 
     public function english()
     {
@@ -49,7 +41,8 @@ class HomeController extends Controller
             'n_title' => 'required|max:255',
             'n_date' => 'required|date',
             'n_disc' => 'required',
-            'n_file' => 'required',
+            'n_file' => 'image|required|mimes:jpeg,bmp,png,jpg',
+            'n_file_m' => 'image|mimes:jpeg,bmp,png,jpg',
         ]);
 
         $mfiles = $req->file('n_file_m');
@@ -89,7 +82,7 @@ class HomeController extends Controller
         if ($data) {
             return view('admin.english.edit')->with('data', $data);
         } else {
-            return redirect()->route('dashboard')->with('error', 'Article Not Found !!');
+            return redirect()->route('news_add')->with('error', 'Article Not Found !!');
         }
     }
 
@@ -99,6 +92,7 @@ class HomeController extends Controller
             'n_title' => 'required|max:255',
             'n_date' => 'required|date',
             'n_disc' => 'required',
+            'n_file' => 'image|mimes:jpeg,bmp,png,jpg',
         ]);
 
         $up_data = newsEnglish::find($id);
@@ -119,7 +113,7 @@ class HomeController extends Controller
             unlink($path);
         }
         $up_data->update();
-        return redirect()->route('dashboard')->with('success', 'Article has been updated successfully.');
+        return redirect()->route('news_add')->with('success', 'Article has been updated successfully.');
     }
 
     public function news_del($id)

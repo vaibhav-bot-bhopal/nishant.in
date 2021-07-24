@@ -5,7 +5,7 @@
     <div class="content-header">
         <!-- your code start here  -->
         <div class="row">
-            <div class="col-lg-10 col-md-10 offset-lg-1 offset-md-1 col-sm-12 mt-5">
+            <div class="col-lg-12 col-md-12 col-sm-12 mt-5">
                 <div id="myAlert"></div>
                 {{-- @if(session('success'))
                     <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -28,8 +28,7 @@
                                         <th>Role</th>
                                         <th class="text-center">Active/Deactive</th>
                                         <th>Created_At</th>
-                                        <th>Edit</th>
-                                        <th>Delete</th>
+                                        <th>Actions</th>
                                     </tr>
                                 </thead>
 
@@ -54,8 +53,11 @@
                                             @endif
                                         </td> -->
                                         <td>{{$user->created_at}}</td>
-                                        <td><a href="{{ url('superadmin/role-edit') }}/{{$user->id}}" class="btn btn-sm btn-primary">Edit</a></td>
-                                        <td><button type="button" class="btn btn-sm btn-warning" id="del-modal" data-id="{{$user->id}}" data-token="{{csrf_token()}}" data-target="delModal">Delete</button></td>
+                                        <td>
+                                            <a href="{{ url('superadmin/role-edit') }}/{{$user->id}}" class="btn btn-sm btn-primary">Edit</a>
+                                            <a href="{{ route('suadmin.changeadminpassword', $user->id) }}" class="btn btn-sm btn-warning">Change Password</a>
+                                            <button type="button" class="btn btn-sm btn-danger" id="del-modal" data-id="{{$user->id}}" data-token="{{csrf_token()}}" data-target="delModal">Delete</button>
+                                        </td>
                                     </tr>
                                     @php
                                         $id++;

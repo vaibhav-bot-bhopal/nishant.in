@@ -93,7 +93,7 @@
     <!-- Main Sidebar Container -->
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
         <!-- Brand Logo -->
-        <a href="{{route('dashboard')}}" class="brand-link">
+        <a href="{{route('admin.dashboard')}}" class="brand-link">
             <img src="{{ asset('public/assets/images/nishant-logo.png') }}" alt="Nishant-Logo" class="brand-image img-circle rounded-0">
             <span class="brand-text font-weight-light">Nishant Kapoor</span>
         </a>
@@ -106,8 +106,10 @@
                     <!-- Add icons to the links using the .nav-icon class with font-awesome or any other icon font library -->
                     <li class="nav-item has-treeview menu-open">
                         <ul class="nav nav-treeview">
+                            @if (Request::is('admin*'))
+                            <li class="nav-header">MAIN NAVIGATION</li>
                             <li class="nav-item">
-                                <a href="{{ route('dashboard') }}" class="nav-link {{ 'admin/dashboard' == request()->path() ? 'active' : '' }}">
+                                <a href="{{ route('admin.dashboard') }}" class="nav-link {{ 'admin/dashboard' == request()->path() ? 'active' : '' }}">
                                     <i class="fas fa-tachometer-alt nav-icon"></i>
                                     <p>Dashboard</p>
                                 </a>
@@ -136,6 +138,42 @@
                                     <p>View Gallery</p>
                                 </a>
                             </li>
+                            <li class="nav-header">ADMIN SYSTEM</li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="nav-icon fas fa-user-cog"></i>
+                                    <p>
+                                        Admin Settings
+                                        <i class="right fas fa-angle-left"></i>
+                                    </p>
+                                </a>
+                                <ul class="nav nav-treeview">
+                                    <li class="nav-item">
+                                        <a href="{{url('admin/profile')}}" class="nav-link {{ 'admin/profile' == request()->path() ? 'active' : '' }}">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>User Profile</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="{{url('admin/changePassword')}}" class="nav-link {{ 'admin/changePassword' == request()->path() ? 'active' : '' }}">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Change Password</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="nav-link">
+                                <i class="nav-icon fas fa-sign-out-alt"></i>
+                                <p>
+                                    Logout
+                                </p>
+                                </a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                </form>
+                            </li>
+                            @endif
                         </ul>
                     </li>
                 </ul>
@@ -154,8 +192,9 @@
     <!-- /.content-wrapper -->
 
     <footer class="main-footer">
-        <strong><a href="{{route('dashboard')}}">NISHANT KAPOOR</a></strong>
-        ©&nbsp;All Rights Reserved
+        Copyright ©&nbsp; {{date('Y')}}
+        <strong><a href="{{route('admin.dashboard')}}">NISHANT KAPOOR.</a></strong>
+        &nbsp;All Rights Reserved
     </footer>
 
 </div>

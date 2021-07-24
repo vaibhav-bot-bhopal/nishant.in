@@ -21,71 +21,91 @@
 @endpush
 
 @section('content')
+
     <!-- Content Header (Page header) -->
     <div class="content-header">
-        <div class="row">
-            <div class="col-lg-10 col-md-10 col-sm-12 offset-lg-1 offset-md-1">
-                <h5 class="page-heading">View Your Gallery</h5>
-                <!-- Gallery Section Start Here -->
-                <div class="row">
-                    @forelse ($photos as $photo)
-                        <div class="col-md-6 col-sm-12">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1 class="m-0">View Gallery</h1>
+                </div><!-- /.col -->
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active">View Gallery</li>
+                    </ol>
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
 
-                            <div class="card">
-                                <div class="card-body text-center">
-                                    <div class="image-box">
-                                        <a href="{{asset('public/storage/gallery/'. $photo->filename)}}" data-toggle="lightbox" data-title="{{$photo->original_name}}" data-gallery="gallery">
-                                            <img class="img-fluid pad rounded" src="{{asset('public/storage/gallery/'. $photo->filename)}}" alt="Gallery Image" style="height: 300px!important;">
-                                        </a>
+    <!-- Main content -->
+    <div class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-10 col-md-10 col-sm-12 offset-lg-1 offset-md-1">
+                    <h5 class="page-heading text-center">View Your Gallery</h5>
+                    <!-- Gallery Section Start Here -->
+                    <div class="row">
+                        @forelse ($photos as $photo)
+                            <div class="col-md-6 col-sm-12">
+
+                                <div class="card">
+                                    <div class="card-body text-center">
+                                        <div class="image-box">
+                                            <a href="{{asset('public/storage/gallery/'. $photo->filename)}}" data-toggle="lightbox" data-title="{{$photo->original_name}}" data-gallery="gallery">
+                                                <img class="img-fluid pad rounded" src="{{asset('public/storage/gallery/'. $photo->filename)}}" alt="Gallery Image" style="height: 300px!important;">
+                                            </a>
+                                        </div>
+                                    </div><!-- /.card-body -->
+
+                                    <div class="card-footer d-flex">
+                                        <p class="card-title mr-auto">
+                                            {{$photo->original_name}}
+                                            <span class="badge badge-info">{{ HumanReadable::bytesToHuman($photo->file_size) }}</span>
+                                        </p>
+
+                                        <!-- Image Tools -->
+                                        <button type="button" class="btn btn-danger btn-sm" onclick="deleteImage({{ $photo->id }})">Delete <i class="fas fa-trash-alt pl-1"></i></button>
+
+                                        <form id="delete-form-{{ $photo->id }}" action="{{ route('images-delete', $photo->id) }}" method="POST" style="display: none;">
+                                            @csrf
+                                            @method('DELETE')
+                                        </form>
                                     </div>
-                                </div><!-- /.card-body -->
-
-                                <div class="card-footer d-flex">
-                                    <p class="card-title mr-auto">
-                                        {{$photo->original_name}}
-                                        <span class="badge badge-info">{{ HumanReadable::bytesToHuman($photo->file_size) }}</span>
-                                    </p>
-
-                                    <!-- Image Tools -->
-                                    <button type="button" class="btn btn-danger btn-sm" onclick="deleteImage({{ $photo->id }})">Delete <i class="fas fa-trash-alt pl-1"></i></button>
-
-                                    <form id="delete-form-{{ $photo->id }}" action="{{ route('images-delete', $photo->id) }}" method="POST" style="display: none;">
-                                        @csrf
-                                        @method('DELETE')
-                                    </form>
+                                    <!-- /.card-footer-->
                                 </div>
-                                <!-- /.card-footer-->
+                                <!-- /.card -->
                             </div>
-                            <!-- /.card -->
-                        </div>
-                        <!-- /.col -->
+                            <!-- /.col -->
 
-                        @empty
+                            @empty
 
-                        <div class="col-md-12">
-                            <div class="card card-widget">
-                                <div class="card-body">
-                                    <h3 class="text-center" style="font-weight: 600; color: #DC143C;">No Gallery Found !!</h3>
+                            <div class="col-md-12">
+                                <div class="card card-widget">
+                                    <div class="card-body">
+                                        <h3 class="text-center" style="font-weight: 600; color: #DC143C;">No Gallery Found !!</h3>
+                                    </div>
+                                    <!-- /.card-body -->
                                 </div>
-                                <!-- /.card-body -->
+                                <!-- /.card -->
                             </div>
-                            <!-- /.card -->
-                        </div>
-                        <!-- /.col -->
-                    @endforelse
-                </div>
-                <!-- Gallery Section End Here -->
+                            <!-- /.col -->
+                        @endforelse
+                    </div>
+                    <!-- Gallery Section End Here -->
 
-                <!-- Pagination Section Start Here -->
-                <div class="d-flex justify-content-center">
-                    {!! $photos->links() !!}
+                    <!-- Pagination Section Start Here -->
+                    <div class="d-flex justify-content-center">
+                        {!! $photos->links() !!}
+                    </div>
+                    <!-- Pagination Section End Here -->
                 </div>
-                <!-- Pagination Section End Here -->
             </div>
         </div>
-
-
     </div>
+    <!-- /.content  -->
 
     <!-- Modal -->
     <div class="modal fade" id="delModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

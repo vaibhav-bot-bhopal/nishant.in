@@ -11,7 +11,7 @@ class SuperAdminController extends Controller
 {
     public function index()
     {
-        $users = User::all();
+        $users = User::where('role_as', 'admin')->get();
         return view('superadmin.user.dashboard')->with('users', $users);
     }
 

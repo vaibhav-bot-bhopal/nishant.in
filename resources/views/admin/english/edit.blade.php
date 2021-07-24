@@ -3,7 +3,7 @@
 @push('css')
     <style>
 
-       .image.image_resized {
+        .image.image_resized {
             display: block;
             box-sizing: border-box;
             margin: 0 auto;
@@ -58,73 +58,78 @@
 @endpush
 
 @section('content')
-<!-- Content Header (Page header) -->
-<div class="content-header">
-    <div class="container-fluid">
-        <div class="row mb-2">
-            <div class="col-sm-6">
-                <h1 class="m-0 text-primary ">Edit Article</h1>
-            </div><!-- /.col -->
-            <div class="col-sm-6">
-                <ol class="breadcrumb float-sm-right">
-                    <li class="breadcrumb-item">
-                        <a href="{{ url('/') }}">Home</a></li>
-                    <li class="breadcrumb-item active">Edit Article</li>
-                </ol>
-            </div><!-- /.col -->
-        </div><!-- /.row -->
-    </div><!-- /.container-fluid -->
 
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1 class="m-0">Edit Article</h1>
+                </div><!-- /.col -->
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active">Edit Article</li>
+                    </ol>
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
 
-    <!-- your code start here  -->
-    <div class="row">
-        <div class="col-lg-8 col-md-8 offset-lg-2 offset-md-2">
+    <!-- Main content -->
+    <div class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-8 col-md-8 offset-lg-2 offset-md-2">
 
-            <form action="{{ route('news_update', $data->id) }}" method="post" enctype="multipart/form-data">
-                @csrf
-                <div class="form-group">
-                <label for="n_title">News Title</label>
-                <input type="text" class="form-control" id="n_title" name="n_title" value="{{$data->title}}" >
-                @error('n_title')
-                <span class="error">{{ $message }}</span>
-                @enderror
+                    <form action="{{ route('news_update', $data->id) }}" method="post" enctype="multipart/form-data">
+                        @csrf
+                        <div class="form-group">
+                            <label for="n_title">News Title</label>
+                            <input type="text" class="form-control" id="n_title" name="n_title" value="{{$data->title}}" >
+                            @error('n_title')
+                                <span class="error">{{ $message }}</span>
+                            @enderror
+                        </div>
+
+                        <div class="form-group">
+                            <label for="n_data">News Date</label>
+                            <input type="date" class="form-control" id="n_date" name="n_date" value="{{$data->date}}" >
+                            @error('n_date')
+                                <span class="error">{{ $message }}</span>
+                            @enderror
+                        </div>
+
+                        <div class="form-group">
+                            <label for="n_disc">News Description</label>
+                            <textarea class="form-control" rows="5" id="n_disc" name="n_disc">{{$data->discription}}</textarea>
+                            @error('n_disc')
+                                <span class="error">{{ $message }}</span>
+                            @enderror
+                        </div>
+
+                        <div class="callout callout-indigo" style="font-weight: 500; letter-spacing: 0.4px;">
+                            <div id="word-count"></div>
+                        </div>
+
+                        <input type="hidden" name="h_file" value="{{$data->image}}">
+                        <div class="form-group">
+                            <strong>Main Image</strong>
+                            <input type="file" class="form-control-file mt-2" name="n_file">
+                            @error('n_file')
+                                <span class="error">{{ $message }}</span>
+                            @enderror
+                        </div>
+
+                        <button type="submit" class="btn btn-primary mt-3 mb-3">Submit</button>
+                    </form>
                 </div>
-                <div class="form-group">
-                <label for="n_data">News Date</label>
-                <input type="date" class="form-control" id="n_date" name="n_date" value="{{$data->date}}" >
-                @error('n_date')
-                <span class="error">{{ $message }}</span>
-                @enderror
-                </div>
-            <div class="form-group">
-                <label for="n_disc">News Description</label>
-                <textarea class="form-control" rows="5" id="n_disc" name="n_disc">{{$data->discription}}</textarea>
-                @error('n_disc')
-                <span class="error">{{ $message }}</span>
-                @enderror
             </div>
-
-            <div class="callout callout-indigo" style="font-weight: 500; letter-spacing: 0.4px;">
-                <div id="word-count"></div>
-            </div>
-
-            <input type="hidden" name="h_file" value="{{$data->image}}">
-            <div class="form-group">
-                <strong>Main Image</strong>
-                <input type="file" class="form-control-file mt-2" name="n_file">
-                @error('n_file')
-                <span class="error">{{ $message }}</span>
-                @enderror
-            </div>
-
-                <button type="submit" class="btn btn-primary mt-3">Submit</button>
-            </form>
-
         </div>
     </div>
-    <!-- your code end here  -->
-</div>
-<!-- /.content-header -->
+    <!-- /.content  -->
+
 @endsection
 
 @push('js')

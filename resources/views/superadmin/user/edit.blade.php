@@ -71,7 +71,7 @@
                             </div>
                             <div class="form-group">
                                 <button type="submit" class="btn btn-secondary">UPDATE</button>
-                                <a href="{{url('superadmin/dashboard')}}" class="btn btn-warning">BACK</a>
+                                <a href="{{route('superadmin.dashboard')}}" class="btn btn-warning">BACK</a>
                             </div>
                         </form>
                     </div>

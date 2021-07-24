@@ -20,7 +20,7 @@ class TestimonialController extends Controller
         $req->validate([
             'n_name' => 'required|max:255',
             'n_disc' => 'required',
-            'n_file' => 'required',
+            'n_file' => 'image|required|mimes:jpeg,bmp,png,jpg',
         ]);
 
         $file = $req->file('n_file');
@@ -57,6 +57,7 @@ class TestimonialController extends Controller
         $req->validate([
             'n_name' => 'required|max:255',
             'n_disc' => 'required',
+            'n_file' => 'image|mimes:jpeg,bmp,png,jpg',
         ]);
 
         $up_data = Testimonial::find($id);

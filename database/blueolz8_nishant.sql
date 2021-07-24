@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 07, 2021 at 07:22 AM
+-- Generation Time: Jul 17, 2021 at 02:00 PM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 7.4.14
 
@@ -172,7 +172,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `role_as`, `status`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'Admin', 'admin@gmail.com', NULL, '$2y$10$ODsjXA1Fzn/v6GWCDbBmieNDpZD3NQAPxFWOLIBjxI17rOec.VXSq', 'admin', 0, NULL, '2021-02-27 03:15:13', '2021-02-27 07:18:49'),
+(1, 'Admin', 'admin@gmail.com', NULL, '$2y$10$ODsjXA1Fzn/v6GWCDbBmieNDpZD3NQAPxFWOLIBjxI17rOec.VXSq', 'admin', 0, NULL, '2021-02-27 03:15:13', '2021-07-17 06:28:57'),
 (2, 'SuperU', 'super@gmail.com', NULL, '$2y$10$9lDJrdk/EBVJbwCrE8mtQetrXBNU6im5197WyYSsME7noy1KXHZ6q', 'superadmin', 0, NULL, '2021-02-27 07:12:52', '2021-02-27 07:12:52');
 
 --

@@ -32,7 +32,7 @@ class AdminMiddleware
             }
             return $next($request);
         } else {
-            return redirect('superadmin/dashboard')->with('error', 'You are not allow to access the Admin Dashboard.');
+            return redirect('superadmin/dashboard');
         }
     }
 }
