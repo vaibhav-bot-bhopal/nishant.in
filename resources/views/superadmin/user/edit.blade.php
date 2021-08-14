@@ -35,7 +35,7 @@
                             <div class="form-group row">
                                 <label for="" class="col-sm-2 col-form-label">User Name: </label>
                                 <div class="col-sm-10">
-                                    <input type="text" name="name" class="form-control @error('name') is-invalid @enderror" value="{{$user_roles->name}}">
+                                    <input type="text" name="name" class="form-control @error('name') is-invalid @enderror" value="{{$user_roles->name}}" placeholder="Enter Name Here">
                                     @error('name')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -46,7 +46,7 @@
                             <div class="form-group row">
                                 <label for="" class="col-sm-2 col-form-label">User Email: </label>
                                 <div class="col-sm-10">
-                                    <input type="text" name="email" class="form-control @error('email') is-invalid @enderror" value="{{$user_roles->email}}">
+                                    <input type="text" name="email" class="form-control @error('email') is-invalid @enderror" value="{{$user_roles->email}}" placeholder="Enter Email Here">
                                     @error('email')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>

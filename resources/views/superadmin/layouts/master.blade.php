@@ -109,7 +109,7 @@
                             </ul>
                         </li>
                         <li class="nav-header">SUPER ADMIN SYSTEM</li>
-                        <li class="nav-item">
+                        <li class="nav-item {{ ('superadmin/profile' == request()->path() || 'superadmin/changePassword' == request()->path()) ? 'menu-open' : '' }}">
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-user-cog"></i>
                                 <p>

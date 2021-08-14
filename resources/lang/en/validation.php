@@ -145,6 +145,10 @@ return [
             'required' => 'The feature image is required !!',
             'mimes' => 'The feature image field supported file of type: :values.',
         ],
+        'n_file_m.*' => [
+            'image' => 'The other image field must be an image.',
+            'mimes' => 'The other image field supported file of type: :values.',
+        ],
         'n_name' => [
             'required' => 'The name field is required !!',
         ],
@@ -154,12 +158,20 @@ return [
         'email' => [
             'required' => 'The email field is required !!',
         ],
+        'roles' => [
+            'required' => 'The roles field is required !!',
+        ],
         'old_password' => [
             'required' => 'The old password field is required !!',
         ],
         'password' => [
             'required' => 'The password field is required !!',
+            'confirmed' => "The password confirmation does not match !!",
         ],
+    ],
+
+    'min' => [
+        'string' => 'The password must be at least :min characters !!',
     ],
 
     /*

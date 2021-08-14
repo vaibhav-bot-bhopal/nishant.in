@@ -2,6 +2,11 @@
 
 @section('title', 'Home')
 
+@push('css')
+
+
+@endpush
+
 @push('js')
     <script>jQuery(function ($) {
         'use strict';
@@ -23,31 +28,37 @@
                 } else if (browser.ie && browser.version <= 8) {
                     var slidesInfo = {
                     ".art-slideslide10": {
-                        "bgimage" : "url('public/assets/images/slideslide10.jpg')",
+                        "bgimage" : "url('public/assets/images/1.jpg')",
                         "bgposition": "0 0",
                         "images": "",
                         "positions": ""
                     },
                     ".art-slideslide11": {
-                        "bgimage" : "url('public/assets/images/slideslide11.jpg')",
+                        "bgimage" : "url('public/assets/images/2.jpg')",
                         "bgposition": "0 0",
                         "images": "",
                         "positions": ""
                     },
                     ".art-slideslide12": {
-                        "bgimage" : "url('public/assets/images/slideslide12.jpg')",
+                        "bgimage" : "url('public/assets/images/3.jpg')",
                         "bgposition": "0 0",
                         "images": "",
                         "positions": ""
                     },
                     ".art-slideslide13": {
-                        "bgimage" : "url('public/assets/images/slideslide13.jpg')",
+                        "bgimage" : "url('public/assets/images/4.jpg')",
                         "bgposition": "0 0",
                         "images": "",
                         "positions": ""
                     },
                     ".art-slideslide14": {
-                        "bgimage" : "url('public/assets/images/slideslide14.jpg')",
+                        "bgimage" : "url('public/assets/images/5.jpg')",
+                        "bgposition": "0 0",
+                        "images": "",
+                        "positions": ""
+                    },
+                    ".art-slideslide15": {
+                        "bgimage" : "url('public/assets/images/6-1.jpg')",
                         "bgposition": "0 0",
                         "images": "",
                         "positions": ""
@@ -101,10 +112,12 @@
                                                     <div class="art-slide-item art-slideslide12" ></div>
                                                     <div class="art-slide-item art-slideslide13" ></div>
                                                     <div class="art-slide-item art-slideslide14" ></div>
+                                                    <div class="art-slide-item art-slideslide15" ></div>
                                                 </div>
                                             </div>
 
                                             <div class="art-slidenavigator art-slidenavigatorslide1" data-left="0.5" data-top="1">
+                                                <a href="#" class="art-slidenavigatoritem"></a>
                                                 <a href="#" class="art-slidenavigatoritem"></a>
                                                 <a href="#" class="art-slidenavigatoritem"></a>
                                                 <a href="#" class="art-slidenavigatoritem"></a>

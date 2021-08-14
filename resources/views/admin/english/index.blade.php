@@ -48,11 +48,6 @@
             margin-left: 1.5em!important;
             max-width: 50%;
         }
-
-        /* Error Style */
-        .error{
-            color:red;
-        }
     </style>
 @endpush
 
@@ -87,39 +82,52 @@
                         @csrf
                         <div class="form-group">
                             <label for="n_title">Title</label>
-                            <input type="text" class="form-control" id="n_title" name="n_title" value="{{old('n_title')}}" placeholder="Enter Title Here">
+                            <input type="text" class="form-control @error('n_title') is-invalid @enderror" id="n_title" name="n_title" value="{{old('n_title')}}" placeholder="Enter Title Here">
                             @error('n_title')
-                                <span class="error">{{ $message }}</span>
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
                             @enderror
                         </div>
 
                         <div class="form-group">
                             <label for="n_date">Date</label>
-                            <input type="date" class="form-control" id="n_date" name="n_date" value="{{old('n_date')}}" >
+                            <input type="date" class="form-control @error('n_date') is-invalid @enderror" id="n_date" name="n_date" value="{{old('n_date')}}" >
                             @error('n_date')
-                                <span class="error">{{ $message }}</span>
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
                             @enderror
                         </div>
 
                         <div class="form-group table-responsive" style="overflow-x: hidden;">
                             <label for="n_disc">Description</label>
-                            <textarea rows="5" id="n_disc" name="n_disc">{{old('n_disc')}}</textarea>
+                            <textarea class="form-control @error('n_disc') is-invalid @enderror" rows="5" id="n_disc" name="n_disc">{{old('n_disc')}}</textarea>
                             @error('n_disc')
-                                <span class="error">{{ $message }}</span>
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
                             @enderror
                         </div>
 
                         <div class="form-group">
-                            <strong> Main Images </strong>
-                            <input type="file" class="form-control-file" name="n_file">
+                            <label>Main Images</label>
+                            <input type="file" class="form-control-file @error('n_file') is-invalid @enderror" name="n_file">
                             @error('n_file')
-                            <span class="error">{{ $message }}</span>
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
                             @enderror
                         </div>
 
                         <div class="form-group">
-                            <strong> Other Images </strong>
-                            <input type="file" class="form-control-file mt-2" name="n_file_m[]" multiple>
+                            <label>Other Images</label>
+                            <input type="file" class="form-control-file mt-2 @error('n_file_m.*') is-invalid @enderror" name="n_file_m[]" multiple>
+                            @error('n_file_m.*')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
                         </div>
 
                         <button type="submit" class="btn btn-primary mt-4">Submit</button>
@@ -152,7 +160,9 @@
                             <td>
                                 <img src="{{asset('public/storage/eng_news/'.$data->image)}}" width="200" height="150" class="img-responsive rounded" alt="image">
                             </td>
-                            <td><a href="{{ route('news_edit', $data->id) }}" class="btn btn-sm btn-success">Edit</a></td>
+                            <td>
+                                <a href="{{ route('news_edit', $data->id) }}" class="btn btn-sm btn-success">Edit</a>
+                            </td>
                             <td>
                                 <button type="button" class="btn btn-sm btn-danger" onclick="deletePost({{ $data->id }})">Delete</button>
                                 <form id="delete-form-{{ $data->id }}" action="{{ route('news_del', $data->id) }}" method="POST" style="display: none;">

@@ -14,7 +14,7 @@
             <li><a href="{{route('nishant.about')}}">Work</a></li>
             <li><a href="{{route('nishant.testimonials')}}">Testimonials</a></li>
             <li><a href="{{route('nishant.blogs')}}">Blogs</a></li>
-            <li><a href="{{route('nishant.photos')}}">Gallery</a></li>
+            {{-- <li><a href="{{route('nishant.photos')}}">Gallery</a></li> --}}
             {{-- <li>
                 <a class="active">Gallery</a>
                 <ul class="active">

@@ -49,11 +49,6 @@
             margin-left: 1.5em!important;
             max-width: 50%;
         }
-
-        /* Error Style */
-        .error{
-            color:red;
-        }
     </style>
 @endpush
 
@@ -86,26 +81,32 @@
                     <form action="{{ route('news_update', $data->id) }}" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="form-group">
-                            <label for="n_title">News Title</label>
-                            <input type="text" class="form-control" id="n_title" name="n_title" value="{{$data->title}}" >
+                            <label for="n_title">Title</label>
+                            <input type="text" class="form-control @error('n_title') is-invalid @enderror" id="n_title" name="n_title" value="{{$data->title}}" placeholder="Enter Title Here">
                             @error('n_title')
-                                <span class="error">{{ $message }}</span>
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
                             @enderror
                         </div>
 
                         <div class="form-group">
-                            <label for="n_data">News Date</label>
-                            <input type="date" class="form-control" id="n_date" name="n_date" value="{{$data->date}}" >
+                            <label for="n_date">Date</label>
+                            <input type="date" class="form-control @error('n_date') is-invalid @enderror" id="n_date" name="n_date" value="{{$data->date}}" >
                             @error('n_date')
-                                <span class="error">{{ $message }}</span>
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
                             @enderror
                         </div>
 
                         <div class="form-group">
-                            <label for="n_disc">News Description</label>
-                            <textarea class="form-control" rows="5" id="n_disc" name="n_disc">{{$data->discription}}</textarea>
+                            <label for="n_disc">Description</label>
+                            <textarea class="form-control @error('n_disc') is-invalid @enderror" rows="5" id="n_disc" name="n_disc">{{$data->discription}}</textarea>
                             @error('n_disc')
-                                <span class="error">{{ $message }}</span>
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
                             @enderror
                         </div>
 
@@ -115,10 +116,12 @@
 
                         <input type="hidden" name="h_file" value="{{$data->image}}">
                         <div class="form-group">
-                            <strong>Main Image</strong>
-                            <input type="file" class="form-control-file mt-2" name="n_file">
+                            <label>Main Image</label>
+                            <input type="file" class="form-control-file mt-2 @error('n_file') is-invalid @enderror" name="n_file">
                             @error('n_file')
-                                <span class="error">{{ $message }}</span>
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
                             @enderror
                         </div>
 
