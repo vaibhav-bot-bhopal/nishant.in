@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\GalleryController;
@@ -22,9 +23,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::match(['get', 'post'], '/logout', [LoginController::class, 'logout'])->name('logout');
 
 Route::get('/', [MainController::class, 'home'])->name('nishant.home');
 // Route::get('/gallery', [MainController::class, 'gallery'])->name('nishant.gallery');
@@ -40,16 +39,16 @@ Auth::routes();
 Route::group(['prefix' => 'superadmin', 'middleware' => ['auth', 'isSuperadmin', 'prevent-back-history']], function () {
     // Account Settings
     Route::get('profile', [SettingsController::class, 'index'])->name('suadmin.profile');
-    Route::put('profile-update', [SettingsController::class, 'updateProfile'])->name('suadmin.profile.update');
+    Route::match(['get', 'put'], 'profile-update', [SettingsController::class, 'updateProfile'])->name('suadmin.profile.update');
     Route::get('changePassword', [SettingsController::class, 'changePassword'])->name('suadmin.changePassword');
-    Route::put('updatePassword', [SettingsController::class, 'updatePassword'])->name('suadmin.updatePassword');
+    Route::match(['get', 'put'], 'updatePassword', [SettingsController::class, 'updatePassword'])->name('suadmin.updatePassword');
     Route::get('adminChangePassword/{id}', [SettingsController::class, 'adminChangePassword'])->name('suadmin.changeadminpassword');
-    Route::put('adminUpdatePassword/{id}', [SettingsController::class, 'adminUpdatePassword'])->name('suadmin.updateadminpassword');
+    Route::match(['get', 'put'], 'adminUpdatePassword/{id}', [SettingsController::class, 'adminUpdatePassword'])->name('suadmin.updateadminpassword');
 
     // For Super Admin Dashboard
     Route::get('dashboard', [SuperAdminController::class, 'index'])->name('superadmin.dashboard');
     Route::get('/role-edit/{id}', [SuperAdminController::class, 'editUserRole'])->name('editUserRole');
-    Route::put('/role-update/{id}', [SuperAdminController::class, 'updateUserRole'])->name('updateUserRole');
+    Route::match(['get', 'put'], '/role-update/{id}', [SuperAdminController::class, 'updateUserRole'])->name('updateUserRole');
     Route::get('/role-delete/{id}', [SuperAdminController::class, 'deleteUserRole'])->name('deleteUserRole');
     Route::get('/changeuserstatus', [SuperAdminController::class, 'changeUserStatus'])->name('changeUserStatus');
 });
@@ -60,27 +59,27 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'isAdmin', 'prevent-
 
     // Account Settings
     Route::get('profile', [SettingsController::class, 'index'])->name('admin.profile');
-    Route::put('profile-update', [SettingsController::class, 'updateProfile'])->name('admin.profile.update');
+    Route::match(['get', 'put'], 'profile-update', [SettingsController::class, 'updateProfile'])->name('admin.profile.update');
     Route::get('changePassword', [SettingsController::class, 'changePassword'])->name('admin.changePassword');
-    Route::put('updatePassword', [SettingsController::class, 'updatePassword'])->name('admin.updatePassword');
+    Route::match(['get', 'put'], 'updatePassword', [SettingsController::class, 'updatePassword'])->name('admin.updatePassword');
 
     // Route for articles
     Route::get('/news_add', [HomeController::class, 'english'])->name('news_add');
-    Route::post('/news_create', [HomeController::class, 'news_create'])->name('news_create');
+    Route::match(['get', 'post'], '/news_create', [HomeController::class, 'news_create'])->name('news_create');
     Route::get('/news_edit/{id}', [HomeController::class, 'news_edit'])->name('news_edit');
-    Route::post('/news_update/{id}', [HomeController::class, 'news_update'])->name('news_update');
+    Route::match(['get', 'post'], '/news_update/{id}', [HomeController::class, 'news_update'])->name('news_update');
     Route::delete('/news_del/{id}', [HomeController::class, 'news_del'])->name('news_del');
 
     // Route for testimonials
     Route::get('/viewTestimonial', [TestimonialController::class, 'viewTestimonial'])->name('viewTestimonial');
-    Route::post('/addTestimonial', [TestimonialController::class, 'addTestimonial'])->name('addTestimonial');
+    Route::match(['get', 'post'], '/addTestimonial', [TestimonialController::class, 'addTestimonial'])->name('addTestimonial');
     Route::get('/editTestimonial/{id}', [TestimonialController::class, 'editTestimonial'])->name('editTestimonial');
-    Route::post('/updateTestimonial/{id}', [TestimonialController::class, 'updateTestimonial'])->name('updateTestimonial');
+    Route::match(['get', 'post'], '/updateTestimonial/{id}', [TestimonialController::class, 'updateTestimonial'])->name('updateTestimonial');
     Route::delete('/deleteTestimonial/{id}', [TestimonialController::class, 'deleteTestimonial'])->name('deleteTestimonial');
 
     // For Gallery Routes
     Route::get('images', [GalleryController::class, 'create'])->name('images');
-    Route::post('images-save', [GalleryController::class, 'store'])->name('images-save');
+    Route::match(['get', 'post'], 'images-save', [GalleryController::class, 'store'])->name('images-save');
     Route::delete('images-delete/{id}', [GalleryController::class, 'destroy'])->name('images-delete');
     Route::get('images-show', [GalleryController::class, 'index'])->name('images-show');
 });

@@ -28,7 +28,7 @@
                 <div class="col-md-12">
                     <div class="card card-dark">
                         <div class="card-header">
-                            <h5 class="card-title">Article, Testimonials & Gallery Information</h5>
+                            <h5 class="card-title">Overview and Informations</h5>
 
                             <div class="card-tools">
                                 <button type="button" class="btn btn-tool" data-card-widget="collapse">
@@ -50,7 +50,7 @@
                                         <div class="icon">
                                         <i class="ion ion-stats-bars"></i>
                                         </div>
-                                        <a href="{{ route('news_add') }}" class="small-box-footer">View Total Articles <i class="fas fa-arrow-circle-right"></i></a>
+                                        <a href="{{ route('news_add') }}" class="small-box-footer">View Articles <i class="fas fa-arrow-circle-right"></i></a>
                                     </div>
                                 </div>
                                 <!-- ./col -->
@@ -66,7 +66,7 @@
                                         <div class="icon">
                                         <i class="ion ion-bag"></i>
                                         </div>
-                                        <a href="{{ route('viewTestimonial') }}" class="small-box-footer">View Total Testimonials <i class="fas fa-arrow-circle-right"></i></a>
+                                        <a href="{{ route('viewTestimonial') }}" class="small-box-footer">View Testimonials <i class="fas fa-arrow-circle-right"></i></a>
                                     </div>
                                 </div>
                                 <!-- ./col -->
@@ -81,7 +81,7 @@
                                         <div class="icon">
                                         <i class="ion ion-bag"></i>
                                         </div>
-                                        <a href="{{ route('images-show') }}" class="small-box-footer">View Total Galleries <i class="fas fa-arrow-circle-right"></i></a>
+                                        <a href="{{ route('images-show') }}" class="small-box-footer">View Galleries <i class="fas fa-arrow-circle-right"></i></a>
                                     </div>
                                 </div>
                                 <!-- ./col -->

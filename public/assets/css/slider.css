@@ -76,6 +76,7 @@
 
 .art-slideslide10 {
     background-image: url("../images/1.jpg");
+    background-size: 100% 100%;
     /* background-size:  auto auto; */
     background-position: center center;
     background-repeat: no-repeat;
@@ -84,33 +85,38 @@
 /* special setup for header/pageslider */
 .responsive .art-header .art-slideslide10 {
     background-image: url("../images/1.jpg");
-    background-size: auto auto;
+    background-size: 100% 100%;
+    /* background-size: auto auto; */
     background-position: center center;
     background-repeat: no-repeat;
 }
 
 .responsive .art-pageslider .art-slideslide10 {
     background-image: url("../images/1.jpg");
-    background-size: auto auto;
+    background-size: 100% 100%;
+    /* background-size: auto auto; */
     background-position: center center;
     background-repeat: no-repeat;
 }
 
 .default-responsive .art-header .art-slideslide10 {
     background-image: url("../images/1.jpg");
-    background-size: auto auto;
+    background-size: 100% 100%;
+    /* background-size: auto auto; */
     background-position: center center;
     background-repeat: no-repeat;
 }
 
 .default-responsive .art-pageslider .art-slideslide10 {
     background-image: url("../images/1.jpg");
-    background-size: auto auto;
+    background-size: 100% 100%;
+    /* background-size: auto auto; */
     background-position: center center;
     background-repeat: no-repeat;
 }
 .art-slideslide11 {
     background-image: url("../images/2.jpg");
+    background-size: 100% 100%;
     /* background-size:  auto auto; */
     background-position: center center;
     background-repeat: no-repeat;
@@ -119,33 +125,38 @@
 /* special setup for header/pageslider */
 .responsive .art-header .art-slideslide11 {
     background-image: url("../images/2.jpg");
-    background-size: auto auto;
+    background-size: 100% 100%;
+    /* background-size: auto auto; */
     background-position: center center;
     background-repeat: no-repeat;
 }
 
 .responsive .art-pageslider .art-slideslide11 {
     background-image: url("../images/2.jpg");
-    background-size: auto auto;
+    background-size: 100% 100%;
+    /* background-size: auto auto; */
     background-position: center center;
     background-repeat: no-repeat;
 }
 
 .default-responsive .art-header .art-slideslide11 {
     background-image: url("../images/2.jpg");
-    background-size: auto auto;
+    background-size: 100% 100%;
+    /* background-size: auto auto; */
     background-position: center center;
     background-repeat: no-repeat;
 }
 
 .default-responsive .art-pageslider .art-slideslide11 {
     background-image: url("../images/2.jpg");
-    background-size: auto auto;
+    background-size: 100% 100%;
+    /* background-size: auto auto; */
     background-position: center center;
     background-repeat: no-repeat;
 }
 .art-slideslide12 {
-    background-image: url("../images/3.jpg");
+    background-image: url("../images/3-1.jpg");
+    background-size: 100% 100%;
     /* background-size:  auto auto; */
     background-position: center center;
     background-repeat: no-repeat;
@@ -153,34 +164,39 @@
 
 /* special setup for header/pageslider */
 .responsive .art-header .art-slideslide12 {
-    background-image: url("../images/3.jpg");
-    background-size: auto auto;
+    background-image: url("../images/3-1.jpg");
+    background-size: 100% 100%;
+    /* background-size: auto auto; */
     background-position: center center;
     background-repeat: no-repeat;
 }
 
 .responsive .art-pageslider .art-slideslide12 {
-    background-image: url("../images/3.jpg");
-    background-size: auto auto;
+    background-image: url("../images/3-1.jpg");
+    background-size: 100% 100%;
+    /* background-size: auto auto; */
     background-position: center center;
     background-repeat: no-repeat;
 }
 
 .default-responsive .art-header .art-slideslide12 {
-    background-image: url("../images/3.jpg");
-    background-size: auto auto;
+    background-image: url("../images/3-1.jpg");
+    background-size: 100% 100%;
+    /* background-size: auto auto; */
     background-position: center center;
     background-repeat: no-repeat;
 }
 
 .default-responsive .art-pageslider .art-slideslide12 {
-    background-image: url("../images/3.jpg");
-    background-size: auto auto;
+    background-image: url("../images/3-1.jpg");
+    background-size: 100% 100%;
+    /* background-size: auto auto; */
     background-position: center center;
     background-repeat: no-repeat;
 }
 .art-slideslide13 {
     background-image: url("../images/4.jpg");
+    background-size: 100% 100%;
     /* background-size:  auto auto; */
     background-position: center center;
     background-repeat: no-repeat;
@@ -189,33 +205,38 @@
 /* special setup for header/pageslider */
 .responsive .art-header .art-slideslide13 {
     background-image: url("../images/4.jpg");
-    background-size: auto auto;
+    background-size: 100% 100%;
+    /* background-size: auto auto; */
     background-position: center center;
     background-repeat: no-repeat;
 }
 
 .responsive .art-pageslider .art-slideslide13 {
     background-image: url("../images/4.jpg");
-    background-size: auto auto;
+    background-size: 100% 100%;
+    /* background-size: auto auto; */
     background-position: center center;
     background-repeat: no-repeat;
 }
 
 .default-responsive .art-header .art-slideslide13 {
     background-image: url("../images/4.jpg");
-    background-size: auto auto;
+    background-size: 100% 100%;
+    /* background-size: auto auto; */
     background-position: center center;
     background-repeat: no-repeat;
 }
 
 .default-responsive .art-pageslider .art-slideslide13 {
     background-image: url("../images/4.jpg");
-    background-size: auto auto;
+    background-size: 100% 100%;
+    /* background-size: auto auto; */
     background-position: center center;
     background-repeat: no-repeat;
 }
 .art-slideslide14 {
     background-image: url("../images/5.jpg");
+    background-size: 100% 100%;
     /* background-size:  auto auto; */
     background-position: center center;
     background-repeat: no-repeat;
@@ -224,34 +245,39 @@
 /* special setup for header/pageslider */
 .responsive .art-header .art-slideslide14 {
     background-image: url("../images/5.jpg");
-    background-size: auto auto;
+    background-size: 100% 100%;
+    /* background-size: auto auto; */
     background-position: center center;
     background-repeat: no-repeat;
 }
 
 .responsive .art-pageslider .art-slideslide14 {
     background-image: url("../images/5.jpg");
-    background-size: auto auto;
+    background-size: 100% 100%;
+    /* background-size: auto auto; */
     background-position: center center;
     background-repeat: no-repeat;
 }
 
 .default-responsive .art-header .art-slideslide14 {
     background-image: url("../images/5.jpg");
-    background-size: auto auto;
+    background-size: 100% 100%;
+    /* background-size: auto auto; */
     background-position: center center;
     background-repeat: no-repeat;
 }
 
 .default-responsive .art-pageslider .art-slideslide14 {
     background-image: url("../images/5.jpg");
-    background-size: auto auto;
+    background-size: 100% 100%;
+    /* background-size: auto auto; */
     background-position: center center;
     background-repeat: no-repeat;
 }
 
 .art-slideslide15 {
     background-image: url("../images/6-1.jpg");
+    background-size: 100% 100%;
     /* background-size:  auto auto; */
     background-position: center center;
     background-repeat: no-repeat;
@@ -260,28 +286,32 @@
 /* special setup for header/pageslider */
 .responsive .art-header .art-slideslide15 {
     background-image: url("../images/6-1.jpg");
-    background-size: auto auto;
+    background-size: 100% 100%;
+    /* background-size: auto auto; */
     background-position: center center;
     background-repeat: no-repeat;
 }
 
 .responsive .art-pageslider .art-slideslide15 {
     background-image: url("../images/6-1.jpg");
-    background-size: auto auto;
+    background-size: 100% 100%;
+    /* background-size: auto auto; */
     background-position: center center;
     background-repeat: no-repeat;
 }
 
 .default-responsive .art-header .art-slideslide15 {
     background-image: url("../images/6-1.jpg");
-    background-size: auto auto;
+    background-size: 100% 100%;
+    /* background-size: auto auto; */
     background-position: center center;
     background-repeat: no-repeat;
 }
 
 .default-responsive .art-pageslider .art-slideslide15 {
     background-image: url("../images/6-1.jpg");
-    background-size: auto auto;
+    background-size: 100% 100%;
+    /* background-size: auto auto; */
     background-position: center center;
     background-repeat: no-repeat;
 }

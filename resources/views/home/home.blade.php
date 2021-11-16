@@ -40,7 +40,7 @@
                         "positions": ""
                     },
                     ".art-slideslide12": {
-                        "bgimage" : "url('public/assets/images/3.jpg')",
+                        "bgimage" : "url('public/assets/images/3-1.jpg')",
                         "bgposition": "0 0",
                         "images": "",
                         "positions": ""
